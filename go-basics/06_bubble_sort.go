@@ -14,7 +14,7 @@ func main() {
 	for i := 0; i < num; i++ {
 		for j := i + 1; j < num; j++ {
 			// 比较大小
-			if sort[i] < sort[j] {
+			if sort[i] > sort[j] {
 				temp := sort[i]
 				sort[i] = sort[j]
 				sort[j] = temp

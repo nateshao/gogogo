@@ -6,6 +6,12 @@
 
 regex在线: [regex101](https://regex101.com/)
 
+```Java
+身份证正则表达式：/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+15位：^\d{15}$
+18位：^\d{18}$  或者  17位 + x
+```
+
 一个正则表达式是一种从左到右匹配主体字符串的模式。
 “Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。
 正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。
@@ -452,7 +458,6 @@ regex在线: [regex101](https://regex101.com/)
                 cat sat
                 on the <a href="#learn-regex"><strong>mat.</strong></a>
 </pre>
-
 [在线练习](https://regex101.com/r/hoGMkP/1)
 
 <pre>
