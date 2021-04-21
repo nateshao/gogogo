@@ -66,7 +66,7 @@ func main() {
 	fmt.Println("vv = ", vv, "jj = ", jj)
 	qq := 0.1
 	ww := 0.2
-	sum := qq + ww
+	sum := qq + ww // 只要使用浮点数，0.1就不能在内存中完全表示，所以我们知道这个值通常会出现在0.10000000000000004之间。
 
 	fmt.Println("qq + ww = ", qq+ww) // sum =  0.30000000000000004
 	fmt.Println("sum = ", sum)       // sum =  0.30000000000000004
