@@ -49,5 +49,9 @@ func main() {
 
 	fmt.Println("gA = ", gA)
 	fmt.Println("gB = ", gB)
-	fmt.Println("gC = ", gC)
+	// fmt.Println("gC = ", gC)
+
+	// 声明多个变量
+	var xx, yy int = 123, 456
+	fmt.Println("xx = ", xx, "yy = ", yy)
 }
