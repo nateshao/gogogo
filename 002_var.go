@@ -54,4 +54,23 @@ func main() {
 	// 声明多个变量
 	var xx, yy int = 123, 456
 	fmt.Println("xx = ", xx, "yy = ", yy)
+
+	var aa, ss = 12, "fkh"
+	fmt.Println("aa = ", aa, "ss = ", ss)
+
+	// 多行变量的声明
+	var (
+		vv int  = 110
+		jj bool = true
+	)
+	fmt.Println("vv = ", vv, "jj = ", jj)
+	qq := 0.1
+	ww := 0.2
+	sum := qq + ww
+
+	fmt.Println("qq + ww = ", qq+ww) // sum =  0.30000000000000004
+	fmt.Println("sum = ", sum)       // sum =  0.30000000000000004
+	fmt.Printf("%.2f\n", 0.1+0.2)    // 0.30
+	fmt.Printf("%.64f\n", 0.1+0.2)   // 0.2999999999999999888977697537484345957636833190917968750000000000
+	fmt.Println(0.1 + 0.2)           // 0.3
 }
