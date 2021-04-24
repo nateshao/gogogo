@@ -26,4 +26,12 @@ func main() {
 	myMap2[3] = "rust"
 	fmt.Println(myMap2)
 
+	fmt.Println("=========第三种声明方式==========")
+	myMap3 := map[string]string{
+		"one":   "java",
+		"two":   "c++",
+		"three": "ruby",
+	}
+	fmt.Println(myMap3)
+
 }
