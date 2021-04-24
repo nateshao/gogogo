@@ -3,7 +3,7 @@ package main
 import (
 	_ "GolangStudy/5-init/lib1"
 	mylib2 "GolangStudy/5-init/lib2"
-	//. "GolangStudy/5-init/lib2"
+	//. "GolangStudy/5-init/lib2"   取别名
 )
 
 func main() {
