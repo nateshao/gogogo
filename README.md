@@ -8,6 +8,12 @@
 
 #### 2. 四种变量的声明方式
 
+> 变量声明以关键字`var`开头，变量类型放在变量的后面，行尾无需分号。 举个例子：
+>
+> 1. `var name string`
+> 2. `    var age int`
+> 3.  var isOk bool
+
 ```go
 package main
 
