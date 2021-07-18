@@ -51,6 +51,7 @@ func main() {
 	fmt.Printf("s2=%v, len(s2)=%d, cap(s2)=%d\n",
 		s2, len(s2), cap(s2))
 
+	// 添加元素
 	s3 := append(s2, 10)
 	s4 := append(s3, 11)
 	s5 := append(s4, 12)
