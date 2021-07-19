@@ -30,6 +30,8 @@ func main() {
 
 	s2 := make([]int, 16)
 	s3 := make([]int, 10, 32)
+	fmt.Println("------------ make s2 --------------", s2, len(s2), cap(s2))
+	fmt.Println("------------ make s3 --------------", s3, "len = ", len(s3), "cap =", cap(s3))
 	printSlice(s2)
 	printSlice(s3)
 
