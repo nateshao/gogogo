@@ -37,11 +37,21 @@ func main() {
 		fmt.Println(v) // 只打印value
 	}
 	fmt.Println("------------------------")
-	coursename := m["course"]
-	fmt.Println(coursename)
+	coursename, ok := m["course"]
+	fmt.Println(coursename, ok)
 
 	fmt.Println("---------如果是拼错的情况下 - 输出空行----------")
-	caursename := m["caurse"]
-	fmt.Println("拼错的情况下 - 输出空行:", caursename)
+	if caursename, ok := m["caurse"]; ok {
+		fmt.Println("拼错的情况下 - 输出空行:", caursename, ok)
+	} else {
+		fmt.Println("key 不存在")
+	}
+	fmt.Println("-------ccmouse 删除前-------")
+	name, ok := m["name"]
+	fmt.Println(name, ok)
+	delete(m, "name")
+	fmt.Println("-------ccmouse 删除后-------")
 
+	name, ok = m["name"] // 第二次赋值就不用 := 了
+	fmt.Println(name, ok)
 }
