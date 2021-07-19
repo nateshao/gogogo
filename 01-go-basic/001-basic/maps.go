@@ -28,7 +28,13 @@ func main() {
 		fmt.Println("key =", k, " value = ", v)
 	}
 
+	fmt.Println("----------只打印key-----------")
 	for k := range m {
 		fmt.Println(k) // 只打印key
 	}
+	fmt.Println("----------只打印value-----------")
+	for _, v := range m {
+		fmt.Println(v) // 只打印value
+	}
+
 }
