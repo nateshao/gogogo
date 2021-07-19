@@ -24,7 +24,7 @@ func main() {
 	var m3 map[string]int
 
 	fmt.Println(m, m2, m3)
-	for k, v := range m { // 遍历输出map m1---打印key和value
+	for k, v := range m { // 遍历输出map m1---打印key和value	: 每一次输出的顺序不一致 原因：map是无序的，是hashmao
 		fmt.Println("key =", k, " value = ", v)
 	}
 
@@ -36,5 +36,12 @@ func main() {
 	for _, v := range m {
 		fmt.Println(v) // 只打印value
 	}
+	fmt.Println("------------------------")
+	coursename := m["course"]
+	fmt.Println(coursename)
+
+	fmt.Println("---------如果是拼错的情况下 - 输出空行----------")
+	caursename := m["caurse"]
+	fmt.Println("拼错的情况下 - 输出空行:", caursename)
 
 }
