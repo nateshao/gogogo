@@ -27,5 +27,5 @@ func main() {
 	root.right = &treeNode{5, nil, nil}
 	root.right.left = new(treeNode)
 	root.print()
-	fmt.Println()
+
 }
