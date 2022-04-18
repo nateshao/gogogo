@@ -1,4 +1,5 @@
-## 文件结构
+
+## beego小项目文件结构
 ├─.idea
 ├─conf
 ├─controllers
