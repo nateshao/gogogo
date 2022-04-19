@@ -57,21 +57,22 @@ func (c *MainController) Get() {
 	//}
 
 	/*删除*/
-	o := orm.NewOrm()
-	user := models.User{}
-	user.Id = 1
-	_, err := o.Delete(&user)
-	if err != nil {
-		beego.Info("删除失败", err)
-		return
-	}
-	beego.Info("删除成功", user)
+	//o := orm.NewOrm()
+	//user := models.User{}
+	//user.Id = 1
+	//_, err := o.Delete(&user)
+	//if err != nil {
+	//	beego.Info("删除失败", err)
+	//	return
+	//}
+	//beego.Info("删除成功", user)
 
 	//c.Data["Website"] = "beego.me"
 	//c.Data["Email"] = "astaxie@gmail.com"
 	//c.TplName = "index.tpl"
-	c.Data["data"] = "千羽的编程时光"
-	c.TplName = "test.html"
+	//c.Data["data"] = "千羽的编程时光"
+	//c.TplName = "test.html"
+	c.TplName = "register.html"
 
 }
 
@@ -79,7 +80,58 @@ func (c *MainController) Post() {
 	//c.Data["Website"] = "beego.me"
 	//c.Data["Email"] = "astaxie@gmail.com"
 	//c.TplName = "index.tpl"
-	c.Data["data"] = "Go开发的编程时光"
-	c.TplName = "test.html"
+	//c.Data["data"] = "Go开发的编程时光"
+	//c.TplName = "test.html"
+
+	// 1，拿到数据
+	username := c.GetString("userName")
+	password := c.GetString("password")
+	// 2，对数据进行校验
+	if username == "" || password == "" {
+		beego.Info("数据不能为空，请重新输入")
+		c.Redirect("/register", 302)
+		return
+	}
+	// 3，插入数据库
+	o := orm.NewOrm()
+	user := models.User{}
+	user.Username = username
+	user.Password = password
+	_, err := o.Insert(&user)
+	if err != nil {
+		beego.Info("数据插入失败")
+		c.Redirect("/register", 302)
+		return
+	}
+	// 4，返回登录页面
+	c.Ctx.WriteString("注册成功")
+}
+
+func (c *MainController) ShowLogin() {
+	c.TplName = "login.html"
+}
+func (c *MainController) HandleLogin() {
+
+	// 1，拿到数据
+	username := c.GetString("userName")
+	password := c.GetString("password")
+	//2，判断数据是否合法
+	if username == "" || password == "" {
+		beego.Info("输入数据不合法，请重新输入")
+		c.TplName = "login.html"
+		return
+	}
+	// 3，查询账号密码是否正确
+	o := orm.NewOrm()
+	user := models.User{}
+	user.Username = username
+	err := o.Read(&user, "Username")
+	if err != nil {
+		beego.Info("查询失败")
+		c.TplName = "login.html"
+		return
+	}
+	//4，跳转
+	c.Ctx.WriteString("恭喜你，登录成功")
 
 }
