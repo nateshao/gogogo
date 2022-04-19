@@ -1,0 +1,37 @@
+{{ template "layout.html" . }}
+{{define "title"}}
+    <title>添加文章类型</title>
+{{end}}
+{{define "main_body"}}
+<div class="main_body" id="main_body">
+        <div class="breadcrub">
+            当前位置：文章管理>添加分类
+        </div>
+        <div class="pannel">
+            <table class="common_table">
+                <tr>
+                    <th width="10%">id</th>
+                    <th width="70%">类别名称</th>
+                    <th width="20%">管理操作</th>
+                </tr>
+                {{range .types}}
+                <tr>
+                    <td>{{.Id}}</td>
+                    <td>{{.TypeName}}</td>
+                    <td><a href="/Article/DeleteArticleType?id={{.Id}}" class="edit">删除</a></td>
+                </tr>
+                {{end}}
+
+                <tr>
+                    <td colspan="3">
+                    <form method="POST" action="/Article/AddArticleType" >
+                        <input type="text" class="type_txt" placeholder="添加分类" name="typeName">
+                        <input type="submit" class="addtype" value="增加分类">
+                    </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{{end}}
+

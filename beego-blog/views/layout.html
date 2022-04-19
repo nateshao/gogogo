@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{ block "title" .}} {{end}}
+     <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    {{ block "jsp" .}}{{end}}
+</head>
+<body>
+    <div class="header">
+        <a href="/Article/ShowArticle" class="logo fl"><img src="/static/img/logo.png" alt="logo"></a>
+        <a href="logout" class="logout fr">退 出</a>
+    </div>
+
+    <div class="side_bar">
+        <div class="user_info">
+            <img src="/static/img/person.png" alt="张大山">
+            <p>欢迎你 <em>{{.username}}</em></p>
+        </div>
+
+        <div class="menu_con">
+            <div class="first_menu active"><a href="javascript:;" class="icon02">文章管理</a></div>
+            <ul class="sub_menu show">
+                <li><a href="/Article/ShowArticle" class="icon031">文章列表</a></li>
+                <li><a href="/Article/AddArticle" class="icon032">添加文章</a></li>
+                <li><a href="/Article/AddArticleType" class="icon034">添加分类</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- {{.LayoutContent}} -->
+    {{ block "main_body" .}} {{end}}
+   
+</body>
+</html>
