@@ -8,12 +8,14 @@ import (
 )
 
 func TestMain(m *testing.M) {
+	//测试前:数据装载、配置初始化等前置工作
 	if err := repository.Init(); err != nil {
 		os.Exit(1)
 	}
 	if err := util.InitLogger(); err != nil {
 		os.Exit(1)
 	}
+	//测试后:释放资源等收尾工作
 	m.Run()
 }
 

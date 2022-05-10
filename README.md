@@ -9,14 +9,14 @@
 ## 项目结构如下：
 
 ```go
-├─day01-05-07
+├─day01-05-07               -- day1 Go语言上手-基础语言
 │  └─go-by-example
 │      ├─example   			-- Go语言基础
 │      ├─guessing-game 		-- 猜谜游戏
 │      ├─proxy         		-- socket5代理
 │      ├─simpledict    		-- 简单翻译接口
 │      └─test
-├─day02-05-08
+├─day02-05-08               -- day2 Go语言上手-工程实践
 │  └─go-project-example
 │      ├─attention
 │      ├─concurrence
@@ -46,6 +46,5 @@
      <td align="center"><img align="center" src="https://cdn.jsdelivr.net/gh/nateshao/images/20220407212652.jpeg" width="200"/></td>
   </tr>
 </table>
-
 
 
