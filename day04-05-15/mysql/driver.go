@@ -80,6 +80,8 @@ func (d MySQLDriver) Open(dsn string) (driver.Conn, error) {
 	return c.Connect(context.Background())
 }
 
+// github.com/go-sql-driver/mysql/driver.go
+// 注册驱动
 func init() {
 	sql.Register("mysql", &MySQLDriver{})
 }
