@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/day03-05-11/go-pprof-practice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/day06/kitex-examples" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/day6/kitex-examples" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/go基础/u2pppw" vcs="Git" />
   </component>
